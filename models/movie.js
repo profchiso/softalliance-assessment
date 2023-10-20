@@ -14,10 +14,12 @@ const movieSchema = new Schema({
   releaseDate: {
     type: Date,
     required: true,
+    index: true,
   },
   rating: {
     type: Number,
     require: true,
+    index: true,
   },
   ticketPrice: {
     type: Number,
