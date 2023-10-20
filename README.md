@@ -32,4 +32,4 @@ Bellow is a brief explanation of each folder
 
 - The required `env` variables are also in the **sample.env.txt** file in the root directory of the app
 
-- For further classification, reach me via my **[email](okoriechinedusunday@gmail.com)**
+- For further classification, reach me via my **[email](mailto:okoriechinedusunday@gmail.com)**
