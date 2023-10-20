@@ -5,8 +5,11 @@ const {
   deleteDocument,
   createDocument,
 } = require("../utils/crudOperations");
+const { validationCheck } = require("../utils/validationCheck");
+const { uploadFile } = require("../utils/imageProcessing");
 
 const { Movie } = require("../models/movie");
+
 const populate = {
   required: false,
   field: "field to populate",
@@ -29,6 +32,9 @@ exports.getAMovie = async (req, res) => {
 
 exports.createMovie = async (req, res) => {
   try {
+    await validationCheck(req, res);
+    const mediaURLuploaded = await uploadFile(req, "photo", "movie-photos");
+    req.body.photo = mediaURLuploaded;
     createDocument(req, res, Movie);
   } catch (error) {
     console.log(error);
