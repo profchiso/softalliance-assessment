@@ -2,11 +2,11 @@
 
 Repository for technical assessment of Okorie Chinedu Sunday
 
-# Introduction
+## Introduction
 
 This repository contains back-end implemention of a RESTful API build with Nodejs/express.js used for managing movies.
 
-# Folder Structure
+## Folder Structure
 
 Bellow is a brief explanation of each folder
 
@@ -26,7 +26,7 @@ Bellow is a brief explanation of each folder
 3. Set the environment variables as found **[here](https://github.com/profchiso/softalliance-assessment/blob/main/sample.env.txt)** I can provide my test cloudinary credentials via email if you don't have one because I used it for the photo upload.
 4. Run the application using the command `node app.js` or `npm start`
 
-# Other informations
+## Other informations
 
 - The API documentation can be found **[here](https://documenter.getpostman.com/view/7669287/2s9YRB3CNw)**, you can also import the documentation using the **Movie API.postman_collection.json** file in the root directory of the project.
 
