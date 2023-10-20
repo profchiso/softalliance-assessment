@@ -39,35 +39,19 @@ exports.cloudinary = cloudinary;
 exports.uploadFile = async (req, field, folder) => {
   let mediaURL = "";
 
-  if (req.file) {
-    await cloudinary.uploader.upload(
-      req.file.path,
-      {
-        public_id: `${folder}/${field}-${Date.now()}`,
-      },
-      (error, result) => {
-        if (error) {
-          console.log(`Error uploading ${field} to cloudinary`);
-        } else {
-          mediaURL = result.secure_url;
-        }
+  await cloudinary.uploader.upload(
+    req.body[field],
+    {
+      public_id: `${folder}/${field}-${Date.now()}`,
+    },
+    (error, result) => {
+      if (error) {
+        console.log(`Error uploading ${field} to cloudinary`);
+      } else {
+        mediaURL = result.secure_url;
       }
-    );
-  } else if (req.body[field]) {
-    await cloudinary.uploader.upload(
-      req.body[field],
-      {
-        public_id: `${folder}/${field}-${Date.now()}`,
-      },
-      (error, result) => {
-        if (error) {
-          console.log(`Error uploading ${field} to cloudinary`);
-        } else {
-          mediaURL = result.secure_url;
-        }
-      }
-    );
-  }
+    }
+  );
 
   return mediaURL;
 };

@@ -7,6 +7,7 @@ const {
 } = require("../utils/crudOperations");
 const { validationCheck } = require("../utils/validationCheck");
 const { uploadFile } = require("../utils/imageProcessing");
+const { capitalize } = require("../utils/capitalize");
 
 const { Movie } = require("../models/movie");
 
@@ -35,6 +36,13 @@ exports.createMovie = async (req, res) => {
     await validationCheck(req, res);
     const mediaURLuploaded = await uploadFile(req, "photo", "movie-photos");
     req.body.photo = mediaURLuploaded;
+    const { name, description, country } = req.body;
+
+    //capitalize necessary fields
+    req.body.name = capitalize(name);
+    req.body.description = capitalize(description);
+    req.body.country = capitalize(country);
+
     createDocument(req, res, Movie);
   } catch (error) {
     console.log(error);
