@@ -32,4 +32,6 @@ Bellow is a brief explanation of each folder
 
 - The required `env` variables are also in the **sample.env.txt** file in the root directory of the project
 
+- The `photo` field must be sent as a base64 encoded string when making a `POST` request to the endpoint
+
 - For further classification, reach me via my **[email](mailto:okoriechinedusunday@gmail.com)**
