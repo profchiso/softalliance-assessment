@@ -28,8 +28,8 @@ Bellow is a brief explanation of each folder
 
 # Other informations
 
-- The API documentation can be found **[here](https://documenter.getpostman.com/view/7669287/2s9YRB3CNw)**, you can also import the documentation jusing the **Movie API.postman_collection.json** file in the root directory of the app.
+- The API documentation can be found **[here](https://documenter.getpostman.com/view/7669287/2s9YRB3CNw)**, you can also import the documentation using the **Movie API.postman_collection.json** file in the root directory of the project.
 
-- The required `env` variables are also in the **sample.env.txt** file in the root directory of the app
+- The required `env` variables are also in the **sample.env.txt** file in the root directory of the project
 
 - For further classification, reach me via my **[email](mailto:okoriechinedusunday@gmail.com)**
