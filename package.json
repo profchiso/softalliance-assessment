@@ -4,7 +4,8 @@
   "description": "RESTful API for movie",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "author": "Okorie Chinedu Sunday",
   "license": "ISC",
