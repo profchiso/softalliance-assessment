@@ -1,4 +1,4 @@
-const express = require("express");
+const { Router } = require("express");
 const {
   getAllMovies,
   getAMovie,
@@ -9,7 +9,7 @@ const {
 
 const { movieCreationValidation } = require("../validations/movie");
 
-const movieRouter = express.Router();
+const movieRouter = Router();
 
 movieRouter.get("/", getAllMovies);
 movieRouter.get("/:id", getAMovie);

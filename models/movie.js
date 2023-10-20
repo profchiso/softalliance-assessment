@@ -8,23 +8,29 @@ const movieSchema = new Schema({
   },
   description: {
     type: String,
+    required: true,
   },
   releaseDate: {
     type: Date,
-    default: generateDate(),
+    required: true,
   },
-  rating: [{ user: { type: Schema.Types.ObjectId }, rate: { type: Number } }],
+  rating: {
+    type: Number,
+    require: true,
+  },
   ticketPrice: {
     type: Number,
-    default: 0,
+    require: true,
   },
   country: {
     type: String,
+    require: true,
   },
 
   genre: [String],
   photo: {
     type: String,
+    require: true,
   },
   createdAt: {
     type: Date,

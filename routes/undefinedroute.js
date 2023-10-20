@@ -1,5 +1,5 @@
-const express = require("express");
-const undefinedrouter = express.Router();
+const { Router } = require("express");
+const undefinedrouter = Router();
 const { undefinedRoute } = require("../controllers/undefinedroute");
 
 undefinedrouter.all("*", undefinedRoute);
