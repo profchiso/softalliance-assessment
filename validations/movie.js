@@ -1,4 +1,4 @@
-const { body, param } = require("express-validator");
+const { body } = require("express-validator");
 
 exports.movieCreationValidation = [
   body("name").trim().notEmpty().withMessage("Name is required"),
@@ -34,8 +34,4 @@ exports.movieCreationValidation = [
     .withMessage("Photo is required")
     .isBase64()
     .withMessage("Photo is expected to be a base64 string"),
-];
-
-exports.movieGetOneValidation = [
-  param("id").trim().notEmpty().withMessage("amount is required"),
 ];
