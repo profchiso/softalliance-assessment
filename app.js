@@ -10,6 +10,7 @@ const hpp = require("hpp");
 
 //user defined modules
 const { movieRouter } = require("./routes/movie");
+const { undefinedrouter } = require("./routes/undefinedroute");
 
 // db connection
 const { connectToDb } = require("./utils/dbcon");

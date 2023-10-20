@@ -11,10 +11,10 @@ const { movieCreationValidation } = require("../validations/movie");
 
 const movieRouter = express.Router();
 
-courseRouter.get("/", getAllMovies);
-courseRouter.get("/:id", getAMovie);
-courseRouter.post("/", movieCreationValidation, createMovie);
-courseRouter.patch("/", updateMovie);
-courseRouter.delete("/:id", deleteMovie);
+movieRouter.get("/", getAllMovies);
+movieRouter.get("/:id", getAMovie);
+movieRouter.post("/", movieCreationValidation, createMovie);
+movieRouter.patch("/", updateMovie);
+movieRouter.delete("/:id", deleteMovie);
 
 module.exports = { movieRouter };
