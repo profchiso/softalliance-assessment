@@ -7,17 +7,21 @@ const {
 } = require("../utils/crudOperations");
 
 const { Movie } = require("../models/movie");
-
+const populate = {
+  required: false,
+  field: "field to populate",
+  columns: "columns to populate",
+};
 exports.getAllMovies = async (req, res) => {
   try {
-    getAll(req, res, Movie, MovieExcludedFields);
+    getAll(req, res, Movie, [], populate, "Movies fetched successfully");
   } catch (error) {
     console.log(error);
   }
 };
 exports.getAMovie = async (req, res) => {
   try {
-    getOne(req, res, Movie, MovieExcludedFields);
+    getOne(req, res, Movie, [], populate, "Movie fetched successfully");
   } catch (error) {
     console.log(error);
   }
