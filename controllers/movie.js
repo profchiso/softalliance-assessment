@@ -8,6 +8,7 @@ const {
 const { validationCheck } = require("../utils/validationCheck");
 const { uploadFile } = require("../utils/imageProcessing");
 const { capitalize } = require("../utils/capitalize");
+const { RESPONSE_TEXT, STATUS_CODES } = require("../utils/response");
 
 const { Movie } = require("../models/movie");
 
@@ -43,7 +44,18 @@ exports.createMovie = async (req, res) => {
     req.body.description = capitalize(description);
     req.body.country = capitalize(country);
 
-    createDocument(req, res, Movie);
+    const data = await createDocument(
+      req,
+      res,
+      Movie,
+      "Movie created successfully"
+    );
+
+    res.status(STATUS_CODES.CREATED).json({
+      statusCode: STATUS_CODES.CREATED,
+      responseText: RESPONSE_TEXT.SUCCESS,
+      data,
+    });
   } catch (error) {
     console.log(error);
   }
@@ -51,7 +63,13 @@ exports.createMovie = async (req, res) => {
 
 exports.updateMovie = async (req, res) => {
   try {
-    updateDocument(req, res, Movie);
+    const updatedResource = await updateDocument(req, res, Movie);
+
+    res.status(STATUS_CODES.OK).json({
+      statusCode: STATUS_CODES.OK,
+      responseText: RESPONSE_TEXT.SUCCESS,
+      data: { msg: "Movie updated successfully", resource: updatedResource },
+    });
   } catch (error) {
     console.log(error);
   }

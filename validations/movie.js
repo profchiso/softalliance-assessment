@@ -6,7 +6,7 @@ exports.movieCreationValidation = [
   body("releaseDate")
     .notEmpty()
     .withMessage("Release Date is required")
-    .isDate()
+    .isDate({ format: "dd/mm/yyyy" })
     .withMessage("Release Date must be a valid date"),
 
   body("rating")
@@ -29,9 +29,5 @@ exports.movieCreationValidation = [
     .isArray()
     .withMessage("Genre  is expected to be any array of string"),
 
-  body("photo")
-    .notEmpty()
-    .withMessage("Photo is required")
-    .isBase64()
-    .withMessage("Photo is expected to be a base64 string"),
+  body("photo").notEmpty().withMessage("Photo is required"),
 ];

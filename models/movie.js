@@ -3,16 +3,16 @@ const { generateDate } = require("../utils/generateDate");
 const movieSchema = new Schema({
   name: {
     type: String,
+    unique: true,
     index: true,
     required: true,
-    unique: true,
   },
   description: {
     type: String,
     required: true,
   },
   releaseDate: {
-    type: Date,
+    type: String,
     required: true,
     index: true,
   },

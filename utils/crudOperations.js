@@ -203,7 +203,6 @@ exports.createDocument = async (
   req,
   res,
   model,
-  extra = {},
   msg = "Resource Created Successfully"
 ) => {
   try {
@@ -211,7 +210,7 @@ exports.createDocument = async (
 
     let resource = { ...createdResource._doc };
 
-    return { msg, resource, extra };
+    return { msg, resource };
   } catch (error) {
     console.log(error);
     return res.status(STATUS_CODES.BAD_REQUEST).json({

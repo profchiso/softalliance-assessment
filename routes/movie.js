@@ -14,7 +14,7 @@ const movieRouter = Router();
 movieRouter.get("/", getAllMovies);
 movieRouter.get("/:id", getAMovie);
 movieRouter.post("/", movieCreationValidation, createMovie);
-movieRouter.patch("/", updateMovie);
+movieRouter.patch("/:id", updateMovie);
 movieRouter.delete("/:id", deleteMovie);
 
 module.exports = { movieRouter };
