@@ -1,0 +1,683 @@
+{
+	"info": {
+		"_postman_id": "69c99973-514a-4200-8590-93f8d07f2145",
+		"name": "Movie API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7669287",
+		"_collection_link": "https://planetary-resonance-955519.postman.co/workspace/profchiso's-Public-Workspace~018210f1-01aa-4b4a-b516-4f23453f3ee8/collection/7669287-69c99973-514a-4200-8590-93f8d07f2145?action=share&source=collection_link&creator=7669287"
+	},
+	"item": [
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/api/v1/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"movies"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4037"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fc5-C0VGGCmKicn7317nS7T4BCS3XFc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Oct 2023 15:46:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"responseText\": \"SUCCESS\",\n    \"data\": {\n        \"msg\": \"Movies fetched successfully\",\n        \"total\": 11,\n        \"resource\": [\n            {\n                \"_id\": \"65329f8b9402c624c53302f2\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 5,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"tes\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816459/movie-photos/photo-1697816455381.jpg\",\n                \"createdAt\": \"2023-10-20T15:40:15.263Z\"\n            },\n            {\n                \"_id\": \"65329f37a854055c87aaf18d\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 5,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816376/movie-photos/photo-1697816369302.jpg\",\n                \"createdAt\": \"2023-10-20T15:39:20.127Z\"\n            },\n            {\n                \"_id\": \"65329ebc4e36b73bd3b59f93\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816252/movie-photos/photo-1697816247075.jpg\",\n                \"createdAt\": \"2023-10-20T15:37:18.367Z\"\n            },\n            {\n                \"_id\": \"65329ed94e36b73bd3b59f95\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 9,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816279/movie-photos/photo-1697816275945.jpg\",\n                \"createdAt\": \"2023-10-20T15:37:18.367Z\"\n            },\n            {\n                \"_id\": \"65329ee04e36b73bd3b59f97\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 0,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816287/movie-photos/photo-1697816286015.jpg\",\n                \"createdAt\": \"2023-10-20T15:37:18.367Z\"\n            },\n            {\n                \"_id\": \"65329ef04e36b73bd3b59f99\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 5,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816304/movie-photos/photo-1697816300600.jpg\",\n                \"createdAt\": \"2023-10-20T15:37:18.367Z\"\n            },\n            {\n                \"_id\": \"65329df147fb0fc2a92fa400\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816049/movie-photos/photo-1697816045397.jpg\",\n                \"createdAt\": \"2023-10-20T15:33:38.130Z\"\n            },\n            {\n                \"_id\": \"65329d12b3525254125f1ad4\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697815827/movie-photos/photo-1697815823460.jpg\",\n                \"createdAt\": \"2023-10-20T15:30:12.213Z\"\n            },\n            {\n                \"_id\": \"65329ceb9ea7be0ad0baa3c7\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697815787/movie-photos/photo-1697815783678.jpg\",\n                \"createdAt\": \"2023-10-20T15:29:33.108Z\"\n            },\n            {\n                \"_id\": \"65329bb33cc3fb65817be204\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697815476/movie-photos/photo-1697815472681.jpg\",\n                \"createdAt\": \"2023-10-20T15:24:20.250Z\"\n            },\n            {\n                \"_id\": \"65329be13cc3fb65817be206\",\n                \"name\": \"Text movie\",\n                \"description\": \"Test description\",\n                \"releaseDate\": \"20/10/2023\",\n                \"rating\": 4,\n                \"ticketPrice\": 3500,\n                \"country\": \"Nigeria\",\n                \"genre\": [\n                    \"test genre 1\",\n                    \"test genre 2\"\n                ],\n                \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697815521/movie-photos/photo-1697815516552.jpg\",\n                \"createdAt\": \"2023-10-20T15:24:20.250Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a movie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/movies/65329f37a854055c87aaf18d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"65329f37a854055c87aaf18d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a movie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/api/v1/movies/65329f8b9402c624c53302f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"65329f8b9402c624c53302f2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-JICvt7AHVx3694Nlae5lyEY8Lr4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Oct 2023 15:46:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"responseText\": \"SUCCESS\",\n    \"data\": {\n        \"msg\": \"Movie fetched successfully\",\n        \"resource\": {\n            \"_id\": \"65329f8b9402c624c53302f2\",\n            \"name\": \"Text movie\",\n            \"description\": \"Test description\",\n            \"releaseDate\": \"20/10/2023\",\n            \"rating\": 5,\n            \"ticketPrice\": 3500,\n            \"country\": \"Nigeria\",\n            \"genre\": [\n                \"tes\"\n            ],\n            \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816459/movie-photos/photo-1697816455381.jpg\",\n            \"createdAt\": \"2023-10-20T15:40:15.263Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delet a movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/movies/65329f8b9402c624c53302f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"65329f8b9402c624c53302f2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a movie",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/api/v1/movies/65329f8b9402c624c53302f2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"65329f8b9402c624c53302f2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"68-RbnxIhEcWOEFTSRymbohkFcBkp4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Oct 2023 15:48:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"responseText\": \"SUCCESS\",\n    \"data\": {\n        \"msg\": \"Resource deleted successfully\",\n        \"resource\": {}\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Text movie\",\n    \"description\":\"test description\",\n    \"releaseDate\":\"20/10/2023\",\n    \"rating\":5,\n    \"ticketPrice\":3500,\n    \"country\": \"nigeria\",\n    \"genre\":[\"test genre 1\", \"test genre 2\"],\n    \"photo\":\"data:image/jpeg;base64,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\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create movie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Text movie\",\n    \"description\":\"test description\",\n    \"releaseDate\":\"20/10/2023\",\n    \"rating\":4,\n    \"ticketPrice\":3500,\n    \"country\": \"nigeria\",\n    \"genre\":[\"test genre 1\", \"test genre 2\"],\n    \"photo\":\"data:image/jpeg;base64,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\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"movies"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "465"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d1-Iyc7CpDXKN+pcQD0TUlY763tLYM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Oct 2023 15:30:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"responseText\": \"SUCCESS\",\n    \"data\": {\n        \"msg\": \"Movie created successfully\",\n        \"resource\": {\n            \"name\": \"Text movie\",\n            \"description\": \"Test description\",\n            \"releaseDate\": \"20/10/2023\",\n            \"rating\": 4,\n            \"ticketPrice\": 3500,\n            \"country\": \"Nigeria\",\n            \"genre\": [\n                \"test genre 1\",\n                \"test genre 2\"\n            ],\n            \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697815827/movie-photos/photo-1697815823460.jpg\",\n            \"createdAt\": \"2023-10-20T15:30:12.213Z\",\n            \"_id\": \"65329d12b3525254125f1ad4\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Text movie update\",\n    \"description\":\"test description update\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/v1/movies/65329f37a854055c87aaf18d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"movies",
+								"65329f37a854055c87aaf18d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update movie",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Text movie update\",\n    \"description\":\"test description update\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/api/v1/movies/65329f37a854055c87aaf18d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"api",
+										"v1",
+										"movies",
+										"65329f37a854055c87aaf18d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "479"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1df-9g9bSiP7aK2YNUMJC22sl2QFtFQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Oct 2023 15:59:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"responseText\": \"SUCCESS\",\n    \"data\": {\n        \"msg\": \"Movie updated successfully\",\n        \"resource\": {\n            \"_id\": \"65329f37a854055c87aaf18d\",\n            \"name\": \"Text movie update\",\n            \"description\": \"test description update\",\n            \"releaseDate\": \"20/10/2023\",\n            \"rating\": 5,\n            \"ticketPrice\": 3500,\n            \"country\": \"Nigeria\",\n            \"genre\": [\n                \"test genre 1\",\n                \"test genre 2\"\n            ],\n            \"photo\": \"https://res.cloudinary.com/giftedbraintech/image/upload/v1697816376/movie-photos/photo-1697816369302.jpg\",\n            \"createdAt\": \"2023-10-20T15:39:20.127Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
