@@ -34,4 +34,4 @@ Bellow is a brief explanation of each folder
 
 - The `photo` field must be sent as a base64 encoded string when making a `POST` request to the endpoint
 
-- For further classification, reach me via my **[email](mailto:okoriechinedusunday@gmail.com)**
+- For further clarification, reach me via my **[email](mailto:okoriechinedusunday@gmail.com)**
