@@ -63,6 +63,10 @@ exports.createMovie = async (req, res) => {
 
 exports.updateMovie = async (req, res) => {
   try {
+    if (req.body.photo) {
+      const mediaURLuploaded = await uploadFile(req, "photo", "movie-photos");
+      req.body.photo = mediaURLuploaded;
+    }
     const updatedResource = await updateDocument(req, res, Movie);
 
     res.status(STATUS_CODES.OK).json({
