@@ -1,7 +1,6 @@
 //NPM modules
 require("dotenv").config(); //require the config files
 const express = require("express");
-const path = require("path");
 const cors = require("cors");
 const helmet = require("helmet");
 const mongoSanitizer = require("express-mongo-sanitize");
@@ -23,9 +22,6 @@ app.enable("trust proxy");
 //middlewares
 
 app.use(helmet()); //middleware to set security HTTP headers
-app.use(express.static(path.join(__dirname, "public")));
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
 
 app.use(express.json({ limit: "100mb" })); //middleware for body-paser
 app.use(express.urlencoded({ extended: true }));
